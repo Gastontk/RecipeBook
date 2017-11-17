@@ -1,7 +1,7 @@
 <div class="col-xs-10" style = 'border: solid red 2px;'>
 	<div class="row">
 
-		<app-shopping-list-edit></app-shopping-list-edit>
+		<app-shopping-list-edit (sendIngredientToParent)="addIngredient($event)"></app-shopping-list-edit>
 		<hr>
 		<ul class="list-group" >
 			<a 

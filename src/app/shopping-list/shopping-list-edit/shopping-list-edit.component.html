@@ -1,22 +1,32 @@
 <div class="row">
 	<div class="col-xs-12">
-		<form>
+		<form #myForm>
 			<div class="row">
 				<div class="col-sm-5 form-group">
 					<label for="name">Name</label>
-					<input type="text" class="form-control">
+					<input 
+					name = 'name'
+					type="text" 
+					class="form-control"
+					#nameInput
+				>
 					
 				</div>
 				<div class="col-sm-2 form-group">
-					<label for="amaount">Amount</label>
-					<input type="number" class="form-control">
+					<label for="amount">Amount</label>
+					<input
+					 name = 'amount'
+					 type="number"
+					 class="form-control"
+					 #amountInput
+				>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<button class="btn btn-success" type = 'submit'>Add</button>
+					<button (click) = "addIngredient(myForm)" class="btn btn-success" type = 'submit'>Add</button>
 					<button class="btn btn-danger" type = 'button'>Delete</button>
-					<button class="btn btn-primary" type = 'button'>Clear</button>
+					<button (click)="nameInput.value = ''; amountInput.value = null" class="btn btn-warning" type = 'button'>Clear</button>
 			</div>
 				</div>
 
